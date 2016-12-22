@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16D0D6BE1E0B3FD2006387A2 /* icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16D0D6BD1E0B3FD2006387A2 /* icon.jpeg */; };
 		16D7E1BB1E0A44730044B6E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7E1BA1E0A44730044B6E9 /* AppDelegate.swift */; };
 		16D7E1BD1E0A44730044B6E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7E1BC1E0A44730044B6E9 /* ViewController.swift */; };
 		16D7E1C01E0A44730044B6E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D7E1BE1E0A44730044B6E9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D0D6BD1E0B3FD2006387A2 /* icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpeg; sourceTree = "<group>"; };
 		16D7E1B71E0A44730044B6E9 /* Cat Years.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Years.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D7E1BA1E0A44730044B6E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16D7E1BC1E0A44730044B6E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				16D7E1BC1E0A44730044B6E9 /* ViewController.swift */,
 				16D7E1BE1E0A44730044B6E9 /* Main.storyboard */,
 				16D7E1C11E0A44730044B6E9 /* Assets.xcassets */,
+				16D0D6BD1E0B3FD2006387A2 /* icon.jpeg */,
 				16D7E1C31E0A44730044B6E9 /* LaunchScreen.storyboard */,
 				16D7E1C61E0A44730044B6E9 /* Info.plist */,
 			);
@@ -234,6 +237,7 @@
 			files = (
 				16D7E1C51E0A44730044B6E9 /* LaunchScreen.storyboard in Resources */,
 				16D7E1C21E0A44730044B6E9 /* Assets.xcassets in Resources */,
+				16D0D6BE1E0B3FD2006387A2 /* icon.jpeg in Resources */,
 				16D7E1C01E0A44730044B6E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +507,7 @@
 				16D7E1E11E0A44730044B6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D7E1E21E0A44730044B6E9 /* Build configuration list for PBXNativeTarget "Cat YearsTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				16D7E1E41E0A44730044B6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D7E1E51E0A44730044B6E9 /* Build configuration list for PBXNativeTarget "Cat YearsUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				16D7E1E71E0A44730044B6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
