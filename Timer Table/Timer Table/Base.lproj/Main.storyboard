@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer_Table" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-vp-do8">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="DXv-U2-S9i">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DXv-U2-S9i" id="iM7-yS-hij">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="T4k-4a-sev"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BV2-3h-Mib"/>
+                                </connections>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.050000000000000003" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="E7g-6t-Rlo">
+                                <rect key="frame" x="14" y="20" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uYC-bP-pYZ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="29" id="85J-6b-hpW"/>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JEV-AC-gaC"/>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mlx-TN-5TU"/>
+                            <constraint firstAttribute="trailing" secondItem="uLu-vp-do8" secondAttribute="trailing" id="OAy-px-oXu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uLu-vp-do8" secondAttribute="bottom" id="Zy4-id-PSg"/>
+                            <constraint firstItem="E7g-6t-Rlo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cNQ-Pn-s0J"/>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="top" secondItem="E7g-6t-Rlo" secondAttribute="bottom" constant="8" id="i5r-W3-5Zs"/>
+                            <constraint firstItem="E7g-6t-Rlo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jrk-Pf-Ima"/>
+                            <constraint firstItem="E7g-6t-Rlo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yXR-fC-KrL"/>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="top" secondItem="E7g-6t-Rlo" secondAttribute="bottom" constant="8" id="z8h-hi-8ma"/>
+                            <constraint firstItem="uLu-vp-do8" firstAttribute="top" secondItem="E7g-6t-Rlo" secondAttribute="bottom" constant="8" id="zBa-SI-IeA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="E7g-6t-Rlo" id="c08-Cn-guv"/>
+                        <outlet property="table" destination="uLu-vp-do8" id="Gb0-zI-awQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
