@@ -1,3 +1,3 @@
 ### Cat Years Mini Game
 
-Learn yor cat's year! 
+Learn your cat's year! 
