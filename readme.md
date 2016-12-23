@@ -30,3 +30,7 @@
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Is%20It%20Prime/is-it-prime.png "a screenshot of the app")
 
 ***
+
+## Timer Table || Multiplication Table
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table/timer-table-1.png "a screenshot of the app")
