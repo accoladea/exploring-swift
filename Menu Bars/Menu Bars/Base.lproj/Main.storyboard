@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Menu_Bars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqq-hj-NlO">
+                                <rect key="frame" x="0.0" y="20" width="736" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Timer" id="Psm-dy-Zs0">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="J8j-G8-NdU">
+                                            <connections>
+                                                <action selector="pause:" destination="BYZ-38-t0r" id="7vs-E5-SEX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="0Zk-N6-7fT">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="3Kk-7S-pBM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAP-rh-ABS">
+                                <rect key="frame" x="0.0" y="370" width="736" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="-10" id="e9V-4d-RDM">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="gEq-0F-EyS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lVr-OG-Kgh"/>
+                                    <barButtonItem title="Reset" id="9mC-Oi-3gi">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="MQz-n4-1HM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="V7M-Pt-hAd"/>
+                                    <barButtonItem title="+10" id="HVh-L2-mun">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="hGd-hs-zUo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-gk-Bs3">
+                                <rect key="frame" x="214.66666666666663" y="192" width="307" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DI9-SM-j47"/>
+                                    <constraint firstAttribute="width" constant="307" id="Igq-bg-m9f"/>
+                                    <constraint firstAttribute="height" constant="30" id="ngU-s6-yOH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="307" id="yd5-yk-xQW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set The Timer:" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-di-77k">
+                                <rect key="frame" x="191" y="111" width="354" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="354" id="8d0-7F-plR"/>
+                                    <constraint firstAttribute="height" constant="98" id="FNp-2h-8Zg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-et-pRL">
+                                <rect key="frame" x="196.66666666666663" y="230" width="343" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="1QZ-U1-mHm"/>
+                                    <constraint firstAttribute="width" constant="343" id="GvF-Yk-b5d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wA9-gk-Bs3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTS-Ch-QF9"/>
+                            <constraint firstItem="Ywe-et-pRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KR8-Zf-8CE"/>
+                            <constraint firstItem="wA9-gk-Bs3" firstAttribute="top" secondItem="fA7-di-77k" secondAttribute="bottom" constant="-17" id="MHX-n2-hsg"/>
+                            <constraint firstItem="fA7-di-77k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QJP-4v-c26"/>
+                            <constraint firstItem="wA9-gk-Bs3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iz1-q8-Qgn"/>
+                            <constraint firstItem="Ywe-et-pRL" firstAttribute="top" secondItem="wA9-gk-Bs3" secondAttribute="bottom" constant="8" id="mIc-uH-UdB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="wA9-gk-Bs3" id="i7M-Nj-K2J"/>
+                        <outlet property="timerLabel" destination="Ywe-et-pRL" id="53m-tt-Gsl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322.5" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
