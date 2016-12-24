@@ -6,6 +6,8 @@
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage/contacts-list.png "a screenshot of the app")
 
+***
+
 ## [Cat Years](https://github.com/accoladea/exploring-swift/blob/master/Cat%20Years)
 
 ![alt text](https://github.com/accoladea/exploring-swift/blob/master/Cat%20Years/cat-years-app.png "a screenshot of the app")
