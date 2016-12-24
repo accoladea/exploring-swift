@@ -23,7 +23,7 @@
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Guess%20Game/how-many-fingers.png "a screenshot of the app")
 
 
-***
+***/Users/zhandov/Desktop/Google Drive/repos/exploring-swift/readme.md
 
 ## [Is It Prime](https://github.com/accoladea/exploring-swift/blob/master/Is%20It%20Prime)
 
@@ -34,3 +34,7 @@
 ## [Timer Table || Multiplication Table](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table/timer-table-1.png "a screenshot of the app")
+
+## [Contact List || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage/contacts-list.png "a screenshot of the app")
