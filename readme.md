@@ -1,5 +1,11 @@
 ### There are different mini apps and games
 
+## [Contact List || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
+
+***
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage/contacts-list.png "a screenshot of the app")
+
 ## [Cat Years](https://github.com/accoladea/exploring-swift/blob/master/Cat%20Years)
 
 ![alt text](https://github.com/accoladea/exploring-swift/blob/master/Cat%20Years/cat-years-app.png "a screenshot of the app")
@@ -34,7 +40,3 @@
 ## [Timer Table || Multiplication Table](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table/timer-table-1.png "a screenshot of the app")
-
-## [Contact List || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
-
-![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage/contacts-list.png "a screenshot of the app")
