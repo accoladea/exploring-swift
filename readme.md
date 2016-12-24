@@ -1,6 +1,6 @@
 ### There are different mini apps and games
 
-## [Contact List || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
+## [Contacts List || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
 
 ***
 
