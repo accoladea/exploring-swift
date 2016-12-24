@@ -30,8 +30,7 @@
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Guess%20Game/how-many-fingers.png "a screenshot of the app")
 
-
-***/Users/zhandov/Desktop/Google Drive/repos/exploring-swift/readme.md
+***
 
 ## [Is It Prime](https://github.com/accoladea/exploring-swift/blob/master/Is%20It%20Prime)
 
