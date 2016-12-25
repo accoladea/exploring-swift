@@ -2,9 +2,9 @@
 
 ***
 
-## [Contacts Book || Permanent Data Storage](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage)
+## [To Do List App](https://github.com/accoladea/exploring-swift/blob/master/To%20Do%20List%20App)
 
-![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Permanent%20Data%20Storage/contacts-list.png "a screenshot of the app")
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/To%20Do%20List%20App/to-do-list-app.png "a screenshot of the app")
 
 ***
 
