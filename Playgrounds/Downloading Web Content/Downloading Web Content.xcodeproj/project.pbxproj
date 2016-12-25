@@ -503,6 +503,7 @@
 				16B540D81E0F886800B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B540D91E0F886800B7DCFD /* Build configuration list for PBXNativeTarget "Downloading Web ContentTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				16B540DB1E0F886800B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B540DC1E0F886800B7DCFD /* Build configuration list for PBXNativeTarget "Downloading Web ContentUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +521,7 @@
 				16B540DE1E0F886800B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
