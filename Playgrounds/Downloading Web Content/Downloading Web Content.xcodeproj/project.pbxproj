@@ -99,6 +99,7 @@
 			children = (
 				16B540B11E0F886800B7DCFD /* AppDelegate.swift */,
 				16B540B31E0F886800B7DCFD /* ViewController.swift */,
+				16B540DF1E1033F100B7DCFD /* New Group */,
 				16B540B51E0F886800B7DCFD /* Main.storyboard */,
 				16B540B81E0F886800B7DCFD /* Assets.xcassets */,
 				16B540BA1E0F886800B7DCFD /* LaunchScreen.storyboard */,
@@ -123,6 +124,13 @@
 				16B540D31E0F886800B7DCFD /* Info.plist */,
 			);
 			path = "Downloading Web ContentUITests";
+			sourceTree = "<group>";
+		};
+		16B540DF1E1033F100B7DCFD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
