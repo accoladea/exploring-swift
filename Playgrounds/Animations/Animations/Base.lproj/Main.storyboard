@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_0_delay-0.06s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Dek-te-id3">
+                                <rect key="frame" x="0.0" y="179" width="375" height="390"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="kuN-K8-yGl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-Ka-XQt">
+                                <rect key="frame" x="38" y="125" width="308" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBj-b5-nqv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGA-dT-gWW">
+                                <rect key="frame" x="144" y="577" width="87" height="53"/>
+                                <state key="normal" title="Slide In"/>
+                                <connections>
+                                    <action selector="slideIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMj-e4-4sf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yz-n2-fsZ">
+                                <rect key="frame" x="259" y="577" width="87" height="53"/>
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="grow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMQ-Ks-hEa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-84-tFB">
+                                <rect key="frame" x="16" y="577" width="87" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="6kZ-Kf-LXp"/>
+                                </constraints>
+                                <state key="normal" title="Fade In"/>
+                                <connections>
+                                    <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nhj-qy-Gso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="top" secondItem="1Yz-n2-fsZ" secondAttribute="top" id="0fx-iY-ekM"/>
+                            <constraint firstItem="Dek-te-id3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0iE-t5-i5w"/>
+                            <constraint firstItem="Dek-te-id3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40.5" id="2IF-HC-Ghe"/>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="leading" secondItem="ghx-84-tFB" secondAttribute="trailing" constant="41" id="3gG-4z-CQa"/>
+                            <constraint firstItem="ghx-84-tFB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="45d-y0-2zG"/>
+                            <constraint firstItem="Dek-te-id3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5WR-Og-C1Q"/>
+                            <constraint firstItem="1Yz-n2-fsZ" firstAttribute="leading" secondItem="MGA-dT-gWW" secondAttribute="trailing" constant="28" id="6h5-bx-p2I"/>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="centerX" secondItem="Dek-te-id3" secondAttribute="centerX" id="7hf-OT-89X"/>
+                            <constraint firstItem="hqC-Ka-XQt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4.5" id="E4Y-bv-Yv9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghx-84-tFB" secondAttribute="bottom" constant="37" id="E7c-fZ-9wg"/>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="baseline" secondItem="1Yz-n2-fsZ" secondAttribute="baseline" id="Q73-de-D4h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dek-te-id3" secondAttribute="bottom" constant="98" id="SYC-xv-ln3"/>
+                            <constraint firstItem="1Yz-n2-fsZ" firstAttribute="baseline" secondItem="MGA-dT-gWW" secondAttribute="firstBaseline" id="TNi-PF-VMn"/>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="baseline" secondItem="1Yz-n2-fsZ" secondAttribute="firstBaseline" id="UkH-W9-ogB"/>
+                            <constraint firstItem="ghx-84-tFB" firstAttribute="top" secondItem="Dek-te-id3" secondAttribute="bottom" constant="8" symbolic="YES" id="Zgg-Qm-40G"/>
+                            <constraint firstItem="ghx-84-tFB" firstAttribute="top" secondItem="MGA-dT-gWW" secondAttribute="top" id="azG-ec-6g1"/>
+                            <constraint firstItem="hqC-Ka-XQt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-185.5" id="bRr-5b-B9D"/>
+                            <constraint firstItem="MGA-dT-gWW" firstAttribute="baseline" secondItem="ghx-84-tFB" secondAttribute="firstBaseline" id="cmH-gJ-n0R"/>
+                            <constraint firstItem="Dek-te-id3" firstAttribute="top" secondItem="hqC-Ka-XQt" secondAttribute="bottom" constant="8" id="csO-Yr-2ps"/>
+                            <constraint firstItem="Dek-te-id3" firstAttribute="leading" secondItem="hqC-Ka-XQt" secondAttribute="trailing" constant="-346" id="df4-eU-1CV"/>
+                            <constraint firstItem="ghx-84-tFB" firstAttribute="baseline" secondItem="MGA-dT-gWW" secondAttribute="baseline" id="wo8-Cd-J9U"/>
+                            <constraint firstItem="1Yz-n2-fsZ" firstAttribute="trailing" secondItem="hqC-Ka-XQt" secondAttribute="trailing" id="yFH-i2-F2i"/>
+                            <constraint firstAttribute="trailing" secondItem="Dek-te-id3" secondAttribute="trailing" id="z3E-1j-Xwl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="Dek-te-id3" id="Tmo-d7-v91"/>
+                        <outlet property="pause" destination="hqC-Ka-XQt" id="XLf-fh-VeV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame_0_delay-0.06s.gif" width="499" height="477"/>
+    </resources>
+</document>
