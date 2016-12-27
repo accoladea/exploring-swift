@@ -2,6 +2,12 @@
 
 ***
 
+## [Tic-Tac-Toe Game](https://github.com/accoladea/exploring-swift/blob/master/TicTacToe)
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/TicTacToe/tic-tac-toe.png "a screenshot of the app")
+
+***
+
 ## [To Do List App](https://github.com/accoladea/exploring-swift/blob/master/To%20Do%20List%20App)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/To%20Do%20List%20App/to-do-list-app.png "a screenshot of the app")
