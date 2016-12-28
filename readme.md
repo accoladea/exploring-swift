@@ -47,3 +47,10 @@
 ## [Timer Table || Multiplication Table](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table/timer-table-1.png "a screenshot of the app")
+
+
+***
+
+## [Location Aware App](https://github.com/accoladea/exploring-swift/blob/master/Location%20Aware)
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Location%20Aware/location-aware.png "a screenshot of the app")
