@@ -6,10 +6,10 @@ Shows the user’s location
 Used CoreLocation and MapKit library (CLGeocoder).
 
 
-*Imported CoreLocation.framework on build-phases/link-binary-with-libraries
+*Imported CoreLocation.framework on build-phases/link-binary-with-libraries*
 
 
-*Added “ Privacy - Location Always Usage Description”, “Privacy - Location When In Use Usage Description” on **Info.plst.
+*Added “ Privacy - Location Always Usage Description”, “Privacy - Location When In Use Usage Description” on Info.plst.*
 
 
 ***
