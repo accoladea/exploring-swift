@@ -20,27 +20,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var map: MKMapView!
     
-    var manager = CLLocationManager()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-        
-        // creates a map
-        map.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2D(latitude: 24.416835, longitude: 54.474021), MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: true)
-    }
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        var latitude: CLLocationDegrees = 0.0
+        var longitude: CLLocationDegrees = 0.0
         
         let location = locations[0]
         
         self.latitudeLabel.text = String(location.coordinate.latitude)
+        latitude = location.coordinate.latitude
+        
         self.longitudeLabel.text = String(location.coordinate.longitude)
+        longitude = location.coordinate.longitude
+        
+        
+        
+        let latDelta: CLLocationDegrees = 0.05
+        let lonDelta: CLLocationDegrees = 0.05
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+        let location1: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: location1, span: span)
+        map.setRegion(region, animated: true)
+
+        let annotation = MKPointAnnotation()
+        
+        annotation.title = "Current Location"
+        
+        annotation.subtitle = "Be aware"
+        
+        annotation.coordinate = location1
+        
+        map.addAnnotation(annotation)
+        
         self.courseLabel.text = String(location.course)
         self.speedLabel.text = String(location.speed)
         self.altitudeLabel.text = String(location.altitude)
@@ -48,7 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
             
             if error != nil {
-                print(error)
+                print(error!)
             } else {
                 
                 if let placemark = placemarks?[0] {
@@ -95,10 +106,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     
                 }
             }
-                
+            
         }
-
+        
     }
+
+    var manager = CLLocationManager()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        // creates a map
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
