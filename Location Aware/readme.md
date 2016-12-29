@@ -2,14 +2,14 @@
 
 Shows the user’s location
 
-Used CLGeocoder and CoreLocation library. 
+
+Used CoreLocation and MapKit library (CLGeocoder).
+
 
 *Imported CoreLocation.framework on build-phases/link-binary-with-libraries
-*Added on Info.plst:
- 
-	Privacy - Location Always Usage Description, 
 
-	Privacy - Location When In Use Usage Description
+
+*Added “ Privacy - Location Always Usage Description”, “Privacy - Location When In Use Usage Description” on **Info.plst.
 
 
 ***
