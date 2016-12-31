@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16B542A01E14E73500B7DCFD"
+               BlueprintIdentifier = "16B542DD1E14F24600B7DCFD"
                BuildableName = "Memorable Places.app"
                BlueprintName = "Memorable Places"
                ReferencedContainer = "container:Memorable Places.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16B542B41E14E73500B7DCFD"
+               BlueprintIdentifier = "16B542F11E14F24600B7DCFD"
                BuildableName = "Memorable PlacesTests.xctest"
                BlueprintName = "Memorable PlacesTests"
                ReferencedContainer = "container:Memorable Places.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16B542BF1E14E73600B7DCFD"
+               BlueprintIdentifier = "16B542FC1E14F24600B7DCFD"
                BuildableName = "Memorable PlacesUITests.xctest"
                BlueprintName = "Memorable PlacesUITests"
                ReferencedContainer = "container:Memorable Places.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16B542A01E14E73500B7DCFD"
+            BlueprintIdentifier = "16B542DD1E14F24600B7DCFD"
             BuildableName = "Memorable Places.app"
             BlueprintName = "Memorable Places"
             ReferencedContainer = "container:Memorable Places.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16B542A01E14E73500B7DCFD"
+            BlueprintIdentifier = "16B542DD1E14F24600B7DCFD"
             BuildableName = "Memorable Places.app"
             BlueprintName = "Memorable Places"
             ReferencedContainer = "container:Memorable Places.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16B542A01E14E73500B7DCFD"
+            BlueprintIdentifier = "16B542DD1E14F24600B7DCFD"
             BuildableName = "Memorable Places.app"
             BlueprintName = "Memorable Places"
             ReferencedContainer = "container:Memorable Places.xcodeproj">
