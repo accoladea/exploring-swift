@@ -11,6 +11,18 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBAction func play(_ sender: Any) {
+        player.play()
+    }
+    @IBAction func pause(_ sender: Any) {
+        player.pause()
+    }
+    @IBAction func slider(_ sender: Any) {
+        player.volume = sliderOutlet.value
+    }
+    @IBOutlet weak var sliderOutlet: UISlider!
+    
+    
     var player = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +30,7 @@ class ViewController: UIViewController {
         let audioPath = Bundle.main.path(forResource: "mozart", ofType: "mp3")
         do {
             try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
-            player.play()
-        } catch{
+                    } catch{
             // Process any errors
         }
         
