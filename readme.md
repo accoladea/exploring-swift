@@ -62,6 +62,6 @@
 
 ***
 
-## [Back To Back](https://github.com/accoladea/exploring-swift/blob/master/Playgrounds/Back%20To%20Back)
+## [Back To Back](https://github.com/accoladea/exploring-swift/blob/master/Back%20To%20Bach/)
 
-![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Playgrounds/Back%20To%20Back/mozart-music.png "a screenshot of the app")
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Back%20To%20Bach/mozart-music.png "a screenshot of the app")
