@@ -14,6 +14,9 @@
 		160900321E19724100193776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160900301E19724100193776 /* LaunchScreen.storyboard */; };
 		1609003D1E19724100193776 /* Back_To_BachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609003C1E19724100193776 /* Back_To_BachTests.swift */; };
 		160900481E19724100193776 /* Back_To_BachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160900471E19724100193776 /* Back_To_BachUITests.swift */; };
+		160900561E1973BD00193776 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 160900551E1973BD00193776 /* back.jpg */; };
+		160900581E19795900193776 /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160900571E19795900193776 /* bach.mp3 */; };
+		1609005A1E197AB800193776 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 160900591E197AB800193776 /* back2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		160900431E19724100193776 /* Back To BachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Back To BachUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		160900471E19724100193776 /* Back_To_BachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back_To_BachUITests.swift; sourceTree = "<group>"; };
 		160900491E19724100193776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160900551E1973BD00193776 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		160900571E19795900193776 /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bach.mp3; sourceTree = "<group>"; };
+		160900591E197AB800193776 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				160900271E19724100193776 /* AppDelegate.swift */,
+				160900551E1973BD00193776 /* back.jpg */,
+				160900591E197AB800193776 /* back2.png */,
 				160900291E19724100193776 /* ViewController.swift */,
+				160900571E19795900193776 /* bach.mp3 */,
 				1609002B1E19724100193776 /* Main.storyboard */,
 				1609002E1E19724100193776 /* Assets.xcassets */,
 				160900301E19724100193776 /* LaunchScreen.storyboard */,
@@ -232,7 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160900561E1973BD00193776 /* back.jpg in Resources */,
+				160900581E19795900193776 /* bach.mp3 in Resources */,
 				160900321E19724100193776 /* LaunchScreen.storyboard in Resources */,
+				1609005A1E197AB800193776 /* back2.png in Resources */,
 				1609002F1E19724100193776 /* Assets.xcassets in Resources */,
 				1609002D1E19724100193776 /* Main.storyboard in Resources */,
 			);

@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_To_Bach" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,110 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6M-Wo-Uw8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Wolfgang Amadeus Mozart" id="gQK-un-N8G">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="RfL-f4-NbQ">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="0bs-Du-aDp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFN-aa-hhz">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="BLX-Zv-hpA"/>
+                                    <constraint firstAttribute="height" constant="44" id="WWX-RN-hbX"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="pause" id="asF-21-zTk">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="drU-N1-0Ve"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lDy-nb-Qri"/>
+                                    <barButtonItem title="Stop" id="ruM-qH-hEF">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="Lhl-0J-eW9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8XF-wC-hPU">
+                                <rect key="frame" x="0.0" y="80" width="375" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="WY2-Qg-nLb"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-42-RSZ">
+                                <rect key="frame" x="14" y="413" width="347" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="5E2-YW-gKm"/>
+                                    <constraint firstAttribute="height" constant="30" id="McU-4b-oMy"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrubberMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="OEv-I5-0bn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-1j-wlO">
+                                <rect key="frame" x="106" y="484" width="140" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Mq-EP-IzQ"/>
+                                    <constraint firstAttribute="width" constant="136" id="lsI-XZ-TbW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="P7l-O2-fDN"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Mm-tBo">
+                                <rect key="frame" x="0.0" y="522" width="375" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="Z83-bn-M3z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s6M-Wo-Uw8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0X7-xN-Pu9"/>
+                            <constraint firstItem="8XF-wC-hPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0vd-Y7-Jkj"/>
+                            <constraint firstAttribute="trailing" secondItem="s6M-Wo-Uw8" secondAttribute="trailing" id="1B2-Oy-UEl"/>
+                            <constraint firstItem="8XF-wC-hPU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8VX-KY-eDi"/>
+                            <constraint firstItem="8XF-wC-hPU" firstAttribute="top" secondItem="s6M-Wo-Uw8" secondAttribute="bottom" constant="16" id="9yn-sq-NkS"/>
+                            <constraint firstItem="fFN-aa-hhz" firstAttribute="top" secondItem="xqq-Mm-tBo" secondAttribute="bottom" id="AHv-H4-69l"/>
+                            <constraint firstItem="OXb-1j-wlO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-11.5" id="D6E-NN-mJY"/>
+                            <constraint firstItem="xqq-Mm-tBo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E3S-3x-6sA"/>
+                            <constraint firstAttribute="trailing" secondItem="8XF-wC-hPU" secondAttribute="trailing" id="G7y-QW-gg3"/>
+                            <constraint firstItem="zVp-42-RSZ" firstAttribute="top" secondItem="8XF-wC-hPU" secondAttribute="bottom" constant="46" id="H6C-8Y-hCa"/>
+                            <constraint firstItem="zVp-42-RSZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J1k-yh-31j"/>
+                            <constraint firstItem="OXb-1j-wlO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="165.5" id="M4H-wm-9jQ"/>
+                            <constraint firstItem="fFN-aa-hhz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QhE-ax-yyv"/>
+                            <constraint firstAttribute="trailing" secondItem="xqq-Mm-tBo" secondAttribute="trailing" id="S1V-j5-RSA"/>
+                            <constraint firstItem="s6M-Wo-Uw8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V1S-tU-FTC"/>
+                            <constraint firstItem="zVp-42-RSZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="94.5" id="XHN-Iq-NsG"/>
+                            <constraint firstItem="fFN-aa-hhz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="311.5" id="YU3-3A-X9m"/>
+                            <constraint firstItem="8XF-wC-hPU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-110" id="a2R-KV-Ljz"/>
+                            <constraint firstItem="fFN-aa-hhz" firstAttribute="top" secondItem="xqq-Mm-tBo" secondAttribute="bottom" id="b0d-Ls-jqJ"/>
+                            <constraint firstItem="xqq-Mm-tBo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQv-nD-bdg"/>
+                            <constraint firstItem="OXb-1j-wlO" firstAttribute="top" secondItem="zVp-42-RSZ" secondAttribute="bottom" constant="41" id="gXI-Bz-5fP"/>
+                            <constraint firstItem="xqq-Mm-tBo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="239" id="pWn-R3-8Ni"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrubber" destination="zVp-42-RSZ" id="Ctm-iT-eev"/>
+                        <outlet property="volumeSlider" destination="OXb-1j-wlO" id="OeL-m4-5Fa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back.jpg" width="250" height="324"/>
+        <image name="back2.png" width="250" height="56"/>
+    </resources>
 </document>
