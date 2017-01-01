@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let audioPath = Bundle.main.path(forResource: "mozart", ofType: "mp3")
+        do {
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+            player.play()
+        } catch{
+            // Process any errors
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

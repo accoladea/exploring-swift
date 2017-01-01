@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		160900011E18CFCB00193776 /* Audio_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160900001E18CFCB00193776 /* Audio_PlayerTests.swift */; };
 		1609000C1E18CFCB00193776 /* Audio_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609000B1E18CFCB00193776 /* Audio_PlayerUITests.swift */; };
+		1609001A1E18D16B00193776 /* mozart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160900191E18D16B00193776 /* mozart.mp3 */; };
 		1609FFEC1E18CFCB00193776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609FFEB1E18CFCB00193776 /* AppDelegate.swift */; };
 		1609FFEE1E18CFCB00193776 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609FFED1E18CFCB00193776 /* ViewController.swift */; };
 		1609FFF11E18CFCB00193776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609FFEF1E18CFCB00193776 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		160900071E18CFCB00193776 /* Audio PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio PlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1609000B1E18CFCB00193776 /* Audio_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_PlayerUITests.swift; sourceTree = "<group>"; };
 		1609000D1E18CFCB00193776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160900191E18D16B00193776 /* mozart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mozart.mp3; sourceTree = "<group>"; };
 		1609FFE81E18CFCB00193776 /* Audio Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1609FFEB1E18CFCB00193776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1609FFED1E18CFCB00193776 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1609FFEB1E18CFCB00193776 /* AppDelegate.swift */,
+				160900191E18D16B00193776 /* mozart.mp3 */,
 				1609FFED1E18CFCB00193776 /* ViewController.swift */,
 				1609FFEF1E18CFCB00193776 /* Main.storyboard */,
 				1609FFF21E18CFCB00193776 /* Assets.xcassets */,
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1609FFF61E18CFCB00193776 /* LaunchScreen.storyboard in Resources */,
+				1609001A1E18D16B00193776 /* mozart.mp3 in Resources */,
 				1609FFF31E18CFCB00193776 /* Assets.xcassets in Resources */,
 				1609FFF11E18CFCB00193776 /* Main.storyboard in Resources */,
 			);
