@@ -48,6 +48,11 @@
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Timer%20Table/timer-table-1.png "a screenshot of the app")
 
+***
+
+## [Memorable Places](https://github.com/accoladea/exploring-swift/blob/master/Memorable%20Places)
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Memorable%20Places/memorable-places.png "a screenshot of the app")
 
 ***
 
