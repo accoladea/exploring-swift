@@ -29,6 +29,7 @@
 		160900EC1E19905B00193776 /* scrubber right.png in Resources */ = {isa = PBXBuildFile; fileRef = 160900E41E19905B00193776 /* scrubber right.png */; };
 		160900ED1E19905B00193776 /* skip back.png in Resources */ = {isa = PBXBuildFile; fileRef = 160900E51E19905B00193776 /* skip back.png */; };
 		160900EE1E19905B00193776 /* skip right.png in Resources */ = {isa = PBXBuildFile; fileRef = 160900E61E19905B00193776 /* skip right.png */; };
+		160900F01E19B2A800193776 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160900EF1E19B2A800193776 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		160900E41E19905B00193776 /* scrubber right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scrubber right.png"; sourceTree = "<group>"; };
 		160900E51E19905B00193776 /* skip back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skip back.png"; sourceTree = "<group>"; };
 		160900E61E19905B00193776 /* skip right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skip right.png"; sourceTree = "<group>"; };
+		160900EF1E19B2A800193776 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				160900CF1E19871C00193776 /* sounds */,
 				160900A31E1986CC00193776 /* ViewController.swift */,
 				160900A51E1986CC00193776 /* Main.storyboard */,
+				160900EF1E19B2A800193776 /* TableViewController.swift */,
 				160900A81E1986CC00193776 /* Assets.xcassets */,
 				160900AA1E1986CC00193776 /* LaunchScreen.storyboard */,
 				160900AD1E1986CC00193776 /* Info.plist */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				160900A41E1986CC00193776 /* ViewController.swift in Sources */,
+				160900F01E19B2A800193776 /* TableViewController.swift in Sources */,
 				160900A21E1986CC00193776 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +583,7 @@
 				160900C81E1986CC00193776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		160900C91E1986CC00193776 /* Build configuration list for PBXNativeTarget "Sound ShakerTests" */ = {
 			isa = XCConfigurationList;
@@ -587,6 +592,7 @@
 				160900CB1E1986CC00193776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		160900CC1E1986CC00193776 /* Build configuration list for PBXNativeTarget "Sound ShakerUITests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +601,7 @@
 				160900CE1E1986CC00193776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
