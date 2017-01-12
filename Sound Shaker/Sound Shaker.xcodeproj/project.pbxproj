@@ -257,6 +257,7 @@
 				TargetAttributes = {
 					1609009D1E1986CC00193776 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TL7B359NPC;
 						ProvisioningStyle = Automatic;
 					};
 					160900B11E1986CC00193776 = {
@@ -490,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = "Sound Shaker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "site.accolade.Sound-Shaker";
@@ -502,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = "Sound Shaker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "site.accolade.Sound-Shaker";

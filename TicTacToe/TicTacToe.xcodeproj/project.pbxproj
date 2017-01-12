@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160901341E1B97AE00193776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160901331E1B97AE00193776 /* Images.xcassets */; };
 		16B541751E11E0E100B7DCFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B541741E11E0E100B7DCFD /* AppDelegate.swift */; };
 		16B541771E11E0E100B7DCFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B541761E11E0E100B7DCFD /* ViewController.swift */; };
 		16B5417A1E11E0E100B7DCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B541781E11E0E100B7DCFD /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160901331E1B97AE00193776 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16B541711E11E0E100B7DCFD /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B541741E11E0E100B7DCFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B541761E11E0E100B7DCFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				16B5417B1E11E0E100B7DCFD /* Assets.xcassets */,
 				16B5417D1E11E0E100B7DCFD /* LaunchScreen.storyboard */,
 				16B541801E11E0E100B7DCFD /* Info.plist */,
+				160901331E1B97AE00193776 /* Images.xcassets */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				TargetAttributes = {
 					16B541701E11E0E100B7DCFD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TL7B359NPC;
 						ProvisioningStyle = Automatic;
 					};
 					16B541841E11E0E100B7DCFD = {
@@ -243,6 +247,7 @@
 			files = (
 				16B541A61E11E29E00B7DCFD /* cross.png in Resources */,
 				16B541A51E11E29E00B7DCFD /* board.png in Resources */,
+				160901341E1B97AE00193776 /* Images.xcassets in Resources */,
 				16B541A71E11E29E00B7DCFD /* nought.png in Resources */,
 				16B5417F1E11E0E100B7DCFD /* LaunchScreen.storyboard in Resources */,
 				16B5417C1E11E0E100B7DCFD /* Assets.xcassets in Resources */,
@@ -421,7 +426,8 @@
 		16B5419A1E11E0E100B7DCFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = site.accolade.TicTacToe;
@@ -433,7 +439,8 @@
 		16B5419B1E11E0E100B7DCFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = site.accolade.TicTacToe;
@@ -515,6 +522,7 @@
 				16B5419B1E11E0E100B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B5419C1E11E0E100B7DCFD /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +531,7 @@
 				16B5419E1E11E0E100B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B5419F1E11E0E100B7DCFD /* Build configuration list for PBXNativeTarget "TicTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +540,7 @@
 				16B541A11E11E0E100B7DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

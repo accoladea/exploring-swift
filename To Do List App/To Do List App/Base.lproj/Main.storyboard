@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,18 +18,18 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-eg-2S5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="dgl-XB-XP6">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dgl-XB-XP6" id="Ifm-UD-uP7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -68,14 +68,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Get Milk" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="K0S-US-FqE">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <rect key="frame" x="15.5" y="258.5" width="289" height="30"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.8901960784313725" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="UNV-47-5BS"/>
+                                    <constraint firstAttribute="width" constant="289" id="UNV-47-5BS"/>
                                     <constraint firstAttribute="height" constant="30" id="wl0-x7-toi"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-YS-kd4">
-                                <rect key="frame" x="130" y="383" width="115" height="48"/>
+                                <rect key="frame" x="102.5" y="331.5" width="115" height="48"/>
                                 <color key="backgroundColor" red="0.85098039215686272" green="0.39215686274509803" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3vD-jQ-IHm"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Add an Item" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="67" y="173" width="240" height="73.5"/>
+                                <rect key="frame" x="40" y="127.5" width="240" height="74"/>
                                 <color key="backgroundColor" red="0.34509803921568627" green="0.5490196078431373" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73.5" id="o0G-ZJ-7qe"/>
@@ -114,10 +114,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.5490196078431373" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="K0S-US-FqE" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="Dyx-PM-BzH"/>
+                            <constraint firstItem="K0S-US-FqE" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-10.5" id="Dyx-PM-BzH"/>
                             <constraint firstItem="K0S-US-FqE" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="KKj-t1-kKw"/>
-                            <constraint firstItem="KbF-YS-kd4" firstAttribute="top" secondItem="K0S-US-FqE" secondAttribute="bottom" constant="35" id="Uji-WE-2sY"/>
-                            <constraint firstItem="K0S-US-FqE" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="71.5" id="ZFf-bt-Bz0"/>
+                            <constraint firstItem="KbF-YS-kd4" firstAttribute="top" secondItem="K0S-US-FqE" secondAttribute="bottom" constant="43" id="Uji-WE-2sY"/>
+                            <constraint firstItem="K0S-US-FqE" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="57" id="ZFf-bt-Bz0"/>
                             <constraint firstItem="KbF-YS-kd4" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="irn-3o-2Of"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vvL-Iu-wrO"/>
                         </constraints>
