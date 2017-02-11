@@ -65,3 +65,14 @@
 ## [Back To Back](https://github.com/accoladea/exploring-swift/blob/master/Back%20To%20Bach/)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Back%20To%20Bach/mozart-music.png "a screenshot of the app")
+
+***
+
+
+## Sound Shaker
+
+# Unfinished: __Design Completed__
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Sound%20Shaker/player.png "a screenshot of the app")
+
+***

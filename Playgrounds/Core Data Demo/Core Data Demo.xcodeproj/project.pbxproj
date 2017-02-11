@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					160900F91E1ACA9A00193776 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TL7B359NPC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = "Core Data Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "site.accolade.Core-Data-Demo";
@@ -274,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TL7B359NPC;
 				INFOPLIST_FILE = "Core Data Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "site.accolade.Core-Data-Demo";
@@ -301,6 +304,7 @@
 				160901111E1ACA9A00193776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
