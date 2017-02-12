@@ -49,7 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let movementAmount = arc4random() % UInt32(self.frame.height / 2)
         
-        let pipeOffset = CGFloat(movementAmount) - self.frame.height / 4
+        let pipeOffset = CGFloat(movementAmount) - self.frame.height / 2
         // Pipe 1
         let pipeTexture = SKTexture(imageNamed: "pipe1.png")
         
@@ -188,22 +188,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Animation of the dragon
         
-        let dragonTexture = SKTexture(imageNamed: "frame_0_delay-0.05s.gif")
-        let dragonTexture2 = SKTexture(imageNamed: "frame_1_delay-0.05s.gif")
-//        let dragonTexture3 = SKTexture(imageNamed: "frame_2_delay-0.05s.gif")
-//        let dragonTexture4 = SKTexture(imageNamed: "frame_3_delay-0.05s.gif")
-//        let dragonTexture5 = SKTexture(imageNamed: "frame_4_delay-0.05s.gif")
-//        let dragonTexture6 = SKTexture(imageNamed: "frame_5_delay-0.05s.gif")
-//        let dragonTexture7 = SKTexture(imageNamed: "frame_6_delay-0.05s.gif")
-//        let dragonTexture8 = SKTexture(imageNamed: "frame_7_delay-0.05s.gif")
-//        let dragonTexture9 = SKTexture(imageNamed: "frame_8_delay-0.05s.gif")
-//        let dragonTexture10 = SKTexture(imageNamed: "frame_9_delay-0.05s.gif")
-//        let dragonTexture11 = SKTexture(imageNamed: "frame_10_delay-0.05s.gif")
-//        let dragonTexture12 = SKTexture(imageNamed: "frame_11_delay-0.05s.gif")
+        let dragonTexture = SKTexture(imageNamed: "dragon1.png")
+        let dragonTexture2 = SKTexture(imageNamed: "dragon2.png")
         
-        let animation = SKAction.animate(with: [dragonTexture,dragonTexture2], timePerFrame: 0.05)
+        let animation = SKAction.animate(with: [dragonTexture,dragonTexture2,], timePerFrame: 0.05)
         
         let makeDragonFlap = SKAction.repeatForever(animation)
+        
         dragon.run(makeDragonFlap)
         
         
@@ -211,7 +202,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         dragon.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         
-        dragon.physicsBody = SKPhysicsBody(circleOfRadius: dragonTexture.size().height / 2)
+        dragon.physicsBody = SKPhysicsBody(circleOfRadius: dragonTexture.size().height / 8)
         
         dragon.physicsBody!.isDynamic = false
         
@@ -246,7 +237,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         scoreLabel.text = "0"
         
-        scoreLabel.position = CGPoint(x: self.frame.midX,y: self.frame.height / 2 - 70)
+        scoreLabel.position = CGPoint(x: self.frame.midX, y: self.frame.height / 2 - 70)
         
         self.addChild(scoreLabel)
         
