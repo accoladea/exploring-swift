@@ -25,15 +25,29 @@ class GameScene: SKScene {
         // Background
         let bgTexture = SKTexture(imageNamed: "bg.png")
         
-        let moveBGAnimation = SKAction.move(by: CGVector(dx: -1), duration: )
+        let moveBGAnimation = SKAction.move(by: CGVector(dx: -bgTexture.size().width, dy: 0), duration: 7)
+        let shiftBGAnimation = SKAction.move(by: CGVector(dx: bgTexture.size().width, dy: 0), duration: 0)
+        let moveBGForever = SKAction.repeatForever(SKAction.sequence([moveBGAnimation, shiftBGAnimation]))
         
-        bg = SKSpriteNode(texture: bgTexture)
+        var i: CGFloat = 0
         
-        bg.position = CGPoint(x: self.frame.midX,y: self.frame.midY)
+        while i < 3 {
+            
+            bg = SKSpriteNode(texture: bgTexture)
         
-        bg.size.height = self.frame.height
+            bg.position = CGPoint(x: bgTexture.size().width * i, y: self.frame.midY)
         
-        self.addChild(bg)
+            bg.size.height = self.frame.height
+            
+            bg.run(moveBGForever)
+        
+            bg.zPosition = -1
+            
+            self.addChild(bg)
+            
+            i += 1
+        }
+
         
         // Animation of the bird
         
@@ -58,6 +72,16 @@ class GameScene: SKScene {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let birdTexture = SKTexture(imageNamed: "flappy1.png")
+        
+        bird.physicsBody = SKPhysicsBody(circleOfRadius: birdTexture.size().height / 2)
+
+        
+        bird.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
+        
+        bird.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 70))
+       
         
     }
     
