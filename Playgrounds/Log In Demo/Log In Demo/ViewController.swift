@@ -37,8 +37,7 @@ class ViewController: UIViewController {
                 
                 label.alpha = 0
                 logOutSender.alpha = 0
-                logInButton.alpha = 1
-                
+                logInButton.setTitle("Login", for: [])
                 isLoggedIn = false
             }
         }
@@ -98,7 +97,7 @@ class ViewController: UIViewController {
             do {
                 try context.save()
 
-                logInButton.setTitle("Login", for: [])
+                logInButton.setTitle("Update Username", for: [])
 
                 label.alpha = 1
                 
