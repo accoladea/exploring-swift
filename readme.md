@@ -2,6 +2,13 @@
 
 ***
 
+## [Flappy Bird Clone](https://github.com/accoladea/exploring-swift/blob/master/Flappy%20Bird)
+
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Flappy%20Bird/picture.png"a screenshot of the app")
+
+
+***
+
 ## [Tic-Tac-Toe Game](https://github.com/accoladea/exploring-swift/blob/master/TicTacToe)
 
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/TicTacToe/tic-tac-toe.png "a screenshot of the app")
