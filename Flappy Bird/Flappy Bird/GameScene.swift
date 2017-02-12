@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -20,7 +20,51 @@ class GameScene: SKScene {
     
     var bg = SKSpriteNode()
     
+    enum ColliderType: UInt32{
+        
+        case Bird = 1
+        case Object = 2
+    }
+    
+    func makePipes() {
+        
+        //Pipes
+        let movePipes = SKAction.move(by: CGVector(dx: -2 * self.frame.width,dy: 0), duration: TimeInterval(self.frame.width / 100))
+        
+        // Gap Height
+        
+        let gapHeight = bird.size.height * 4
+        
+        let movementAmount = arc4random() % UInt32(self.frame.height / 2)
+        
+        let pipeOffset = CGFloat(movementAmount) - self.frame.height / 4
+        // Pipe 1
+        let pipeTexture = SKTexture(imageNamed: "pipe1.png")
+        
+        let pipe1 = SKSpriteNode(texture: pipeTexture)
+        
+        pipe1.position = CGPoint(x: self.frame.midX + self.frame.width, y: self.frame.midY + pipeTexture.size().height / 2 + gapHeight / 2 + pipeOffset)
+        
+        pipe1.run(movePipes)
+        
+        self.addChild(pipe1)
+        
+        // Pipe 2
+        let pipeTexture2 = SKTexture(imageNamed: "pipe2.png")
+        
+        let pipe2 = SKSpriteNode(texture: pipeTexture2)
+        
+        pipe2.position = CGPoint(x: self.frame.midX + self.frame.width, y: self.frame.midY - pipeTexture2.size().height / 2 - gapHeight / 2 + pipeOffset)
+        
+        pipe2.run(movePipes)
+        
+        self.addChild(pipe2)
+        
+    }
+    
     override func didMove(to view: SKView) {
+        
+        _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.makePipes), userInfo: nil, repeats: true)
         
         // Background
         let bgTexture = SKTexture(imageNamed: "bg.png")
@@ -64,6 +108,9 @@ class GameScene: SKScene {
         
         bird.run(makeBirdFlap)
         
+        //Bird and objects start to contact
+                
+        
         self.addChild(bird)
         
 //Another node -> Ground (invisible object)
@@ -79,32 +126,7 @@ class GameScene: SKScene {
         self.addChild(ground)
         
         
-//Pipes
-        let movePipes
-        // Gap Height
-        
-        let gapHeight = bird.size.height * 4
-        
-        let movementAmount = arc4random() % UInt32(self.frame.height / 2)
-        
-        let pipeOffset = CGFloat(movementAmount) - self.frame.height / 4
-        // Pipe 1
-        let pipeTexture = SKTexture(imageNamed: "pipe1.png")
-        
-        let pipe1 = SKSpriteNode(texture: pipeTexture)
-        
-        pipe1.position = CGPoint(x: self.frame.midX, y: self.frame.midY + pipeTexture.size().height / 2 + gapHeight / 2 + pipeOffset)
-        
-        self.addChild(pipe1)
-        
-        // Pipe 2
-        let pipeTexture2 = SKTexture(imageNamed: "pipe2.png")
-        
-        let pipe2 = SKSpriteNode(texture: pipeTexture2)
-        
-        pipe2.position = CGPoint(x: self.frame.midX, y: self.frame.midY - pipeTexture2.size().height / 2 - gapHeight / 2 + pipeOffset)
-        
-        self.addChild(pipe2)
+
     }
     
     
