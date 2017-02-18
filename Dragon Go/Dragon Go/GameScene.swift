@@ -45,11 +45,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Gap Height
         
-        let gapHeight = dragon.size.height * 4
+        let gapHeight = dragon.size.height * 2
         
         let movementAmount = arc4random() % UInt32(self.frame.height / 2)
         
         let pipeOffset = CGFloat(movementAmount) - self.frame.height / 2
+        
         // Pipe 1
         let pipeTexture = SKTexture(imageNamed: "pipe1.png")
         
@@ -191,7 +192,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let dragonTexture = SKTexture(imageNamed: "dragon1.png")
         let dragonTexture2 = SKTexture(imageNamed: "dragon2.png")
         
-        let animation = SKAction.animate(with: [dragonTexture,dragonTexture2,], timePerFrame: 0.05)
+        let animation = SKAction.animate(with: [dragonTexture,dragonTexture2], timePerFrame: 0.05)
         
         let makeDragonFlap = SKAction.repeatForever(animation)
         
@@ -252,7 +253,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             dragon.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
             
-            dragon.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 70))
+            dragon.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 50))
             
         } else {
             
