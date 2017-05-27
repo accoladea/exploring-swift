@@ -10,58 +10,48 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var cityTextField: UITextField!
-
-    @IBOutlet weak var resultLabel: UILabel!
-
-    @IBAction func getWeather(_ sender: Any) {
     
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    
-        if let url = URL(string: "http://www.weather-forecast.com/locations/London/forecasts/latest") {
+    @IBOutlet weak var textField: UITextField!
+    @IBAction func submit(_ sender: Any) {
+        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=" + textField.text!.replacingOccurrences(of: " ",with: "%20") +  ",uk&appid=039779dfcd4c22fae7b7a59e9acf3f95"){
         
-        let request = NSMutableURLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-            data, response, error in
-            
-            var message = ""
+        let task = URLSession.shared.dataTask(with: url){ (data, response, error) in
             
             if error != nil {
-                
-                print("Error is appeared")
-                
+                print(error);
             } else {
                 
-                if let unwrappingData = data {
-                    
-                    let dataString = NSString(data: unwrappingData, encoding: String.Encoding.utf8.rawValue)
-                    
-                    var stringSeparator = "Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class = \"phrase\">"
-                    if let contentArray = dataString?.components(separatedBy: stringSeparator) {
+                if let urlContent = data {
+                    do{
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                         
-                        if contentArray.count > 1 {
+                        print(jsonResult);
+                        
+                        if let description = ((jsonResult["weather"] as? NSArray)?[0] as? NSDictionary)?["description"] as? String {
                             
-                            stringSeparator = "</span>"
-                            
-                            let newContentArray = contentArray[1].components(separatedBy: stringSeparator)
-                            
-                            if newContentArray.count > 1 {
-                                
-                                message = newContentArray[0].replacingOccurrences(of: "&deg;", with: "°")
-                                
-                                print(message)
-                            }
+                            DispatchQueue.main.sync(execute: {
+                                self.resultLabel.text = description
+                            })
                         }
+                        
+                    } catch {
+                        print("JSON Processing Failed")
                     }
                 }
             }
+            
+            
         }
+        task.resume();
+        } else {
+            resultLabel.text = "Couldn't find weather for that city"
+        }
+
     }
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

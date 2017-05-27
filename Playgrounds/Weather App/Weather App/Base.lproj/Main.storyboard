@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" highlightedImage="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-4B-n1d">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25524400684931509" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.016909246575342467" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.25524400684931509" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-kT-tx7">
@@ -49,11 +49,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LEP-Rz-M3u">
-                                <rect key="frame" x="20" y="429" width="374" height="85"/>
-                                <color key="backgroundColor" red="0.19264178770000001" green="0.61467946419999997" blue="0.72249930250000005" alpha="0.2577589897260274" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEP-Rz-M3u">
+                                <rect key="frame" x="20" y="429" width="374" height="253"/>
+                                <fontDescription key="fontDescription" name="Papyrus-Condensed" family="Papyrus" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-fc-Fpf">
@@ -69,7 +68,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z73-Ou-sgA"/>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYr-3k-Dfe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFL-C3-v7V">
@@ -100,15 +99,15 @@
                             <constraint firstItem="mWE-4B-n1d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jrt-BM-xgn"/>
                             <constraint firstItem="CFL-C3-v7V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kOi-Ao-OfH"/>
                             <constraint firstItem="LEP-Rz-M3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYL-jj-aby"/>
-                            <constraint firstItem="LEP-Rz-M3u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="103.5" id="oti-N1-Yan"/>
+                            <constraint firstItem="LEP-Rz-M3u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="187.5" id="oti-N1-Yan"/>
                             <constraint firstItem="t1z-Tn-jM0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-12" id="pCU-EA-uTi"/>
                             <constraint firstItem="bJR-kT-tx7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54" id="pe3-VM-6ek"/>
                             <constraint firstItem="LEP-Rz-M3u" firstAttribute="top" secondItem="3Yh-fc-Fpf" secondAttribute="bottom" constant="8" id="reW-s1-yi6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityTextField" destination="t1z-Tn-jM0" id="LAL-fL-Ur0"/>
-                        <outlet property="resultLabel" destination="LEP-Rz-M3u" id="rLM-5g-YYr"/>
+                        <outlet property="resultLabel" destination="LEP-Rz-M3u" id="7qE-8Q-ZgN"/>
+                        <outlet property="textField" destination="t1z-Tn-jM0" id="lgx-Qk-7nq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
