@@ -10,4 +10,3 @@
 ![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Blog%20Reader/two.png "a screenshot of the app") 
 
 ### Can be designed nicely by CSS
-
