@@ -65,7 +65,7 @@
  
  print(error)
  
- } else {
+ } else { 
  
  if let user = object {
  
@@ -124,15 +124,6 @@ class ViewController: UIViewController {
             createAlert(title: "Error in form", message: "Please enter an email and passord")
             
         } else {
-            
-            activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-            activityIndicator.center = self.view.center
-            activityIndicator.hidesWhenStopped = true
-                activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-                view.addSubview(activityIndicator)
-                UIApplication.shared.beginIgnoringInteractionEvents()
-            
-            
             
             if signupMode {
                 // Sign Up

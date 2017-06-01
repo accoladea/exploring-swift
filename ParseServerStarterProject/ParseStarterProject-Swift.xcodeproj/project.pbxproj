@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16DADE601EDF5FB4007C0E0A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DADE5F1EDF5FB4007C0E0A /* PostViewController.swift */; };
+		16DADE621EDF8176007C0E0A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DADE611EDF8176007C0E0A /* FeedTableViewController.swift */; };
+		16DADE641EDFD8D5007C0E0A /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DADE631EDFD8D5007C0E0A /* FeedTableViewCell.swift */; };
+		16DADE661EDFE853007C0E0A /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 16DADE651EDFE853007C0E0A /* readme.md */; };
 		16FDE2121EDCA21600983B9B /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FDE20E1EDCA21600983B9B /* four.png */; };
 		16FDE2131EDCA21600983B9B /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FDE20F1EDCA21600983B9B /* one.png */; };
 		16FDE2141EDCA21600983B9B /* three.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FDE2101EDCA21600983B9B /* three.png */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16DADE5F1EDF5FB4007C0E0A /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = ../PostViewController.swift; sourceTree = "<group>"; };
+		16DADE611EDF8176007C0E0A /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		16DADE631EDFD8D5007C0E0A /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		16DADE651EDFE853007C0E0A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		16FDE20E1EDCA21600983B9B /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
 		16FDE20F1EDCA21600983B9B /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = one.png; sourceTree = "<group>"; };
 		16FDE2101EDCA21600983B9B /* three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = three.png; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				16DADE651EDFE853007C0E0A /* readme.md */,
 				16FDE20E1EDCA21600983B9B /* four.png */,
 				16FDE20F1EDCA21600983B9B /* one.png */,
 				16FDE2101EDCA21600983B9B /* three.png */,
@@ -97,9 +106,12 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				16DADE611EDF8176007C0E0A /* FeedTableViewController.swift */,
+				16DADE5F1EDF5FB4007C0E0A /* PostViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				16DADE631EDFD8D5007C0E0A /* FeedTableViewCell.swift */,
 				16FDE2161EDDF63B00983B9B /* UserTableViewController.swift */,
 			);
 			path = ParseStarterProject;
@@ -203,7 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DADE601EDF5FB4007C0E0A /* PostViewController.swift in Sources */,
+				16DADE641EDFD8D5007C0E0A /* FeedTableViewCell.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
+				16DADE621EDF8176007C0E0A /* FeedTableViewController.swift in Sources */,
+				16DADE661EDFE853007C0E0A /* readme.md in Sources */,
 				16FDE2171EDDF63B00983B9B /* UserTableViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 			);
@@ -237,10 +253,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -282,10 +301,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
