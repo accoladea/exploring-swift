@@ -21,6 +21,8 @@ class UserTableViewController: UITableViewController {
         
         PFUser.logOut()
         
+        PFUser.logOutInBackground()
+        
         performSegue(withIdentifier: "logoutSegue", sender: self)
         
     }
