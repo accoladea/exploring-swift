@@ -4,7 +4,7 @@
 
 ## [Image Share & Follow](https://github.com/accoladea/exploring-swift/blob/master/ParseServerStarterProject)
 
-![alt tag](https://github.com/accoladea/exploring-swift/blob/master/ParseServerStarterProject/bir.png "a screenshot of the app")
+![alt tag](https://github.com/accoladea/exploring-swift/blob/master/Image%20Share/bir.png "a screenshot of the app")
 
 
 ***
