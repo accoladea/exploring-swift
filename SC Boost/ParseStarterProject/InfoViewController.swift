@@ -41,11 +41,69 @@ class InfoViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
     }
     
+    var gender: Bool = false
+    var country: String = ""
+    var status: Int = 0
+    
+    @IBOutlet var errorMessage: UILabel!
+    
+    @IBOutlet var statusSControl: UISegmentedControl!
     @IBOutlet var genderSControl: UISegmentedControl!
     @IBOutlet var countryField: UITextField!
     @IBAction func finish(_ sender: Any) {
         
+        
+        
+        // countryField
+        
+        country = countryField.text!
+
+        print("\n" + country + "\n")
+        
+        // genderSControl
+        
         print(genderSControl.selectedSegmentIndex)
+        
+        if genderSControl.selectedSegmentIndex == 1 {
+            
+            //Gender selected is woman
+            gender = true
+            
+            print(gender)
+            
+        } else {
+            //Gender selected is man
+            gender = false
+            print(gender)
+        }
+        
+        PFUser.current()?["isFemale"] = gender
+        
+        // Status of a person
+        
+        
+        if genderSControl.selectedSegmentIndex == 0 {
+            
+            //Status selected is "student"
+            
+            status = 0
+            
+            print(status)
+            
+        } else if genderSControl.selectedSegmentIndex == 1 {
+            
+            //Status selected is "working"
+            status = 1
+            
+            print(status)
+            
+        } else {
+            //Status selected is "neither"
+            
+            status = 2
+            print(status)
+        }
+
         
     
     }
@@ -53,6 +111,11 @@ class InfoViewController: UIViewController, UINavigationControllerDelegate, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let isFemale = PFUser.current()?["isFemale"] {
+            
+            genderSControl.selectedSegmentIndex = 1
+            
+        }
         // Do any additional setup after loading the view.
     }
 
