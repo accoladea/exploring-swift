@@ -27,6 +27,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var cometCategory: UInt32 = 0x1 << 1;
     var photonTorpedoCategory: UInt32 = 0x1 << 0;
     
+    var touchChecker: CGPoint!;
+    
     override func didMove(to view: SKView) {
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
@@ -38,8 +40,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player = SKSpriteNode(imageNamed: "shuttle")
         player.position = CGPoint(x: frame.midX, y: frame.minY + 200)
-        player.xScale = 3
-        player.yScale = 3
+        player.xScale = 1.5
+        player.yScale = 1.5
+        
         self.addChild(player)
         
         
@@ -48,10 +51,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: self.frame.midX - 200, y: self.frame.size.height / 2.5)
+        scoreLabel.position = CGPoint(x: self.frame.size.width - 100, y: self.frame.size.height - 70)
         
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 58
+        scoreLabel.fontSize = 35
         scoreLabel.fontColor = UIColor.white
         scoreLabel.zPosition = 5
         score = 0
@@ -67,10 +70,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         possibleComets = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleComets) as! [String]
         
         let comet = SKSpriteNode(imageNamed: possibleComets[0])
-        comet.xScale = 2
-        comet.yScale = 2
         
-        let randomCometPosition = GKRandomDistribution(lowestValue: Int(self.frame.minX + comet.size.width), highestValue: Int(self.frame.size.width - 5 * comet.size.width))
+        let randomCometPosition = GKRandomDistribution(lowestValue: Int(self.frame.minX + comet.size.width), highestValue: Int(self.frame.size.width - comet.size.width))
         let cometPosition = CGFloat(randomCometPosition.nextInt())
         
         comet.position = CGPoint(x: cometPosition, y: self.frame.size.height + comet.size.height)
@@ -101,8 +102,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if player.contains(location) {
                 
-                player.position = location
+                player.position = CGPoint(x: location.x, y: location.y + 15)
                 
+                touchChecker = player.position
             }
             
         }
@@ -117,7 +119,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if player.contains(location) {
                 
-                player.position = location
+                player.position = CGPoint(x: location.x, y: location.y + 15)
                 
             }
             
@@ -126,7 +128,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        fireTorpedo()
+        
+        for touch in touches{
+            
+            let location = touch.location(in: self)
+            
+            if player.contains(location) {
+                if touchChecker == player.position {
+                    fireTorpedo()
+                }
+            }
+            
+        }
+        
+        
     }
     
     func fireTorpedo() {
@@ -135,7 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let torpedoNode = SKSpriteNode(imageNamed: "torpedo")
         torpedoNode.position = (player?.position)!
-        torpedoNode.position.y += 5
+        torpedoNode.position.y += 10
         
         torpedoNode.physicsBody = SKPhysicsBody(circleOfRadius: torpedoNode.size.width / 2)
         torpedoNode.physicsBody?.isDynamic = true
@@ -196,7 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         torpedoNode.removeFromParent()
         alienNode.removeFromParent()
         
-        self.run(SKAction.wait(forDuration: 2)) {
+        self.run(SKAction.wait(forDuration: 4)) {
             
             explosion.removeFromParent()
         }
@@ -204,5 +219,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 5
         
     }
+    
+    
     
 }
