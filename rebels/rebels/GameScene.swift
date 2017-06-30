@@ -21,15 +21,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var highestScore = 0
+    
     var gameTimer: Timer!;
     var possibleComets = ["alien","alien3"];
     
     var cometCategory: UInt32 = 0x1 << 1;
     var photonTorpedoCategory: UInt32 = 0x1 << 0;
-    
-    var touchChecker: CGPoint!;
+        
+    var livesArray: [SKSpriteNode]!
     
     override func didMove(to view: SKView) {
+        
+        addLives()
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
         starfield.position = CGPoint(x:0, y: frame.height)
@@ -60,8 +64,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score = 0
         self.addChild(scoreLabel)
         
+        var timeInterval = 0.75;
         
-        gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addComets), userInfo: nil, repeats: true)
+        if UserDefaults.standard.bool(forKey: "medium"){
+            
+            timeInterval = 0.5
+        } else if UserDefaults.standard.bool(forKey: "hard"){
+            
+            timeInterval = 0.35
+        }
+        
+        gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(addComets), userInfo: nil, repeats: true)
+        
+    }
+    
+    func addLives(){
+        
+        livesArray = [SKSpriteNode]()
+        
+        for live in 1 ... 3 {
+            
+            let liveNode = SKSpriteNode(imageNamed: "life-img")
+            liveNode.xScale = 0.45
+            liveNode.yScale = 0.45
+            liveNode.zPosition = 5
+            liveNode.zRotation = 0.5
+            liveNode.position = CGPoint(x: self.frame.minX + CGFloat(4-live) * liveNode.size.width, y: self.frame.size.height - 73 + liveNode.size.height / 2)
+            
+            self.addChild(liveNode)
+            livesArray.append(liveNode)
+        }
         
     }
     
@@ -89,11 +121,56 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionArray = [SKAction]()
         
         actionArray.append(SKAction.move(to: CGPoint(x: cometPosition, y: -comet.size.height + self.frame.minY), duration: animationDuration))
+        
+        actionArray.append(SKAction.run {
+            
+            self.run(SKAction.playSoundFileNamed("loose.mp3", waitForCompletion: false))
+            
+            if self.livesArray.count > 0 {
+                
+                let liveNode = self.livesArray.first
+                liveNode!.removeFromParent()
+                self.livesArray.removeFirst()
+                
+                if self.livesArray.count == 0 {
+                    
+                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+                    
+                    gameOver.highestScore = self.highestScore
+                    gameOver.score = self.score
+                    
+                    let maxscoreDefault = UserDefaults.standard
+                    
+                    if (maxscoreDefault.value(forKey: "Highscore") != nil){
+                        
+                        self.highestScore = maxscoreDefault.value(forKey: "Highscore") as! Int
+                        gameOver.highestScore = self.highestScore
+                        
+                    }
+                    
+                    if self.score > self.highestScore {
+                        self.highestScore = self.score
+                        gameOver.highestScore = self.highestScore
+                        
+                        let userDefaultsScore = UserDefaults.standard
+                        userDefaultsScore.set(self.highestScore, forKey: "Highscore")
+                        userDefaultsScore.synchronize()
+                        
+                    }
+
+                    self.view?.presentScene(gameOver, transition: transition) 
+                }
+            }
+            
+        })
+        
         actionArray.append(SKAction.removeFromParent())
         comet.run(SKAction.sequence(actionArray))
         
     }
     
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         for touch in touches{
@@ -104,7 +181,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 player.position = CGPoint(x: location.x, y: location.y + 15)
                 
-                touchChecker = player.position
             }
             
         }
@@ -134,9 +210,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             
             if player.contains(location) {
-                if touchChecker == player.position {
                     fireTorpedo()
-                }
             }
             
         }
@@ -211,7 +285,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         torpedoNode.removeFromParent()
         alienNode.removeFromParent()
         
-        self.run(SKAction.wait(forDuration: 4)) {
+        self.run(SKAction.wait(forDuration: 0.5)) {
             
             explosion.removeFromParent()
         }
@@ -219,7 +293,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 5
         
     }
-    
     
     
 }

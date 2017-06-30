@@ -69,7 +69,7 @@ class MenuScene: SKScene {
     }
     
     func changeDifficulty () {
-        
+    
         let userDefaults = UserDefaults.standard
         
         if difficultyLabelNode.text == "Easy" {
